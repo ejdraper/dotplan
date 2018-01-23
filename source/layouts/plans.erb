@@ -1,0 +1,19 @@
+<% wrap_layout 'layout' do %>
+  <h2><%= current_article.title %></h2>
+
+  <%= yield %>
+
+  <br />
+
+  <p>
+    Tags: 
+    <% current_article.tags.each do |tag| %>
+      <%= link_to tag, tag_path(tag) %>
+      <% unless current_article.tags.last == tag %>
+        &bullet;
+      <% end %>
+    <% end %>
+  </p>
+
+  <%= link_to "Back to list", "/" %>
+<% end %>

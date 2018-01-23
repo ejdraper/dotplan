@@ -44,3 +44,11 @@ page '/*.txt', layout: false
 #   activate :minify_css
 #   activate :minify_javascript
 # end
+
+activate :blog do |blog|
+  blog.name = "plans"
+  blog.prefix = "plans"
+  blog.layout = "layouts/plans"
+  blog.tag_template = "plans/tag.html"
+  blog.permalink = "{title}.html"
+end
