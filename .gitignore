@@ -5,3 +5,4 @@
 build/
 source/plans/*.markdown
 .powrc
+log
